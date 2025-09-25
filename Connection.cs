@@ -32,7 +32,7 @@ public static class Connection
     public static async Task PictureOfDay(HttpClient client)
     {
         // Tehdään GET-pyyntö NASA:n APOD-rajapintaan
-        var response = await client.GetAsync("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+        var response = await client.GetAsync("https://api.nasa.gov/planetary/apod?api_key=OcdSExVCql7aUDejkztCjrpk8YIb2FxctVXlrnii");
 
         // Tarkistetaan, onnistuiko pyyntö (esim. saatiin status 200 OK)
         if (response.IsSuccessStatusCode)
@@ -109,7 +109,7 @@ public static class Connection
         string yesterday = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
 
         // Tehdään API-pyyntö eilisen päivämäärällä
-        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date={yesterday}";
+        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=OcdSExVCql7aUDejkztCjrpk8YIb2FxctVXlrnii&date={yesterday}";
 
         var response = await client.GetAsync(apiUrl);
 
@@ -182,7 +182,7 @@ public static class Connection
         }
 
         // Rakennetaan API-pyyntö valitulle päivämäärälle
-        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date={ChoosenDate:yyyy-MM-dd}";
+        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=OcdSExVCql7aUDejkztCjrpk8YIb2FxctVXlrnii&date={ChoosenDate:yyyy-MM-dd}";
 
         var response = await client.GetAsync(apiUrl);
 
@@ -249,7 +249,7 @@ public static class Connection
         string randomDay = randomDate.ToString("yyyy-MM-dd");
 
         // Tehdään API-pyyntö satunnaiselle päivälle
-        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date={randomDay:yyyy-MM-dd}";
+        string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key=OcdSExVCql7aUDejkztCjrpk8YIb2FxctVXlrnii&date={randomDay:yyyy-MM-dd}";
 
         var response = await client.GetAsync(apiUrl);
 
