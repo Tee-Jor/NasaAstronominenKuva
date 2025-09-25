@@ -24,9 +24,11 @@ class Program
                     break;
 
                 case "3":
+                    await Connection.ChoosePicture(client);
                     break;
 
                 case "4":
+                    await Connection.RandomPicture(client);
                     break;
 
                 case "5":
